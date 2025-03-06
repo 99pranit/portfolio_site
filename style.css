@@ -11,6 +11,13 @@
   --border-radius: 8px;
   --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease-in-out;
+  --primary: #7F5AF0;
+  --secondary: #2CB67D;
+  --accent: #F25F5C;
+  --dark: #16161A;
+  --light: #FFFFFE;
+  --text: #94A1B2;
+  --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
 }
 
 * {
