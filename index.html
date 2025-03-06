@@ -1,257 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pranit Das | AI Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #7F5AF0;
-            --secondary: #2CB67D;
-            --accent: #F25F5C;
-            --dark: #16161A;
-            --light: #FFFFFE;
-            --text: #94A1B2;
-            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
-            --font: 'Space Grotesk', sans-serif;
-            --x: 50%;
-            --y: 50%;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font);
-            background: var(--dark);
-            color: var(--text);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Dynamic Cursor Effect */
-        body:hover::after {
-            content: '';
-            position: fixed;
-            width: 30px;
-            height: 30px;
-            border: 2px solid var(--primary);
-            border-radius: 50%;
-            top: var(--y);
-            left: var(--x);
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            z-index: 9999;
-            mix-blend-mode: difference;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-        }
-
-        .particles-container {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .hero-text h1 {
-            font-size: 4.5rem;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-        }
-
-        .animated-subtitle {
-            font-size: 1.5rem;
-            color: var(--text);
-            margin-bottom: 2rem;
-        }
-
-        /* Projects Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 4rem 0;
-        }
-
-        .project-card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 1.5rem;
-            padding: 2rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-
-        /* Skills Matrix */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .skill-item {
-            background: var(--dark);
-            padding: 1.5rem;
-            border-radius: 1rem;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .skill-item:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero-text h1 {
-                font-size: 3rem;
-            }
-            
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pranit Das | AI Engineer & Data Scientist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <section class="hero">
-        <div id="particles" class="particles-container"></div>
-        <div class="hero-content">
-            <div class="hero-text" data-aos="fade-up">
-                <h1>Pranit Das</h1>
-                <div class="animated-subtitle">
-                    <span class="typing-text"></span>
-                </div>
-                <div class="hero-cta">
-                    <a href="#projects" class="cta-btn">Explore Projects</a>
-                </div>
-            </div>
+  <!-- Hero Section with Particle Background -->
+  <section class="hero" id="home">
+    <div id="particles" class="particles-container"></div>
+    <div class="hero-content">
+      <div class="hero-text" data-aos="fade-up">
+        <h1>Pranit Das</h1>
+        <div class="animated-subtitle">
+          <span class="typing-text"></span>
         </div>
-    </section>
+        <div class="hero-cta">
+          <a href="#projects" class="cta-btn">Explore Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
+  <!-- About Section -->
+  <section id="about" data-aos="fade-up">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I am Pranit Das, an aspiring AI Engineer and Data Scientist with a strong foundation in data analytics, machine learning, and data visualization. Currently pursuing my Master's in Computer Science with a specialization in Data Science and AI at NIT Durgapur, I have practical industry experience as a Data Engineer at MathCo. I am proficient in Python, SQL, Tableau, and various ML frameworks, and I love turning data into actionable insights.
+      </p>
+    </div>
+  </section>
 
-        // Particle Background
-        particlesJS('particles', {
-            particles: {
-                number: { value: 80 },
-                color: { value: '#7F5AF0' },
-                shape: { type: 'circle' },
-                opacity: { value: 0.5 },
-                size: { value: 3 },
-                move: {
-                    enable: true,
-                    speed: 2,
-                    direction: 'none',
-                    random: false,
-                    straight: false,
-                    out_mode: 'out',
-                    bounce: false
-                }
-            },
-            interactivity: {
-                detect_on: 'canvas',
-                events: {
-                    onhover: { enable: true, mode: 'repulse' },
-                    onclick: { enable: true, mode: 'push' },
-                    resize: true
-                }
-            },
-            retina_detect: true
-        });
+  <!-- Projects Section -->
+  <section id="projects" data-aos="fade-up">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <!-- Project cards will be generated dynamically -->
+      </div>
+    </div>
+  </section>
 
-        // Dynamic Typing Effect
-        const titles = ["AI Engineer", "Data Scientist", "ML Developer"];
-        let count = 0;
-        let index = 0;
-        let currentText = '';
-        const typingElement = document.querySelector('.typing-text');
+  <!-- Contact Section -->
+  <section id="contact" data-aos="fade-up">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>
+        Feel free to drop me a message at 
+        <a href="mailto:99pranitd@gmail.com">99pranitd@gmail.com</a> or connect with me on 
+        <a href="https://www.linkedin.com/in/pranit-das-87739a230" target="_blank">LinkedIn</a>.
+      </p>
+    </div>
+  </section>
 
-        function typeText() {
-            if (count === titles.length) count = 0;
-            currentText = titles[count];
-            
-            if(index < currentText.length) {
-                typingElement.textContent += currentText.charAt(index);
-                index++;
-                setTimeout(typeText, 100);
-            } else {
-                setTimeout(deleteText, 2000);
-            }
-        }
-
-        function deleteText() {
-            if(index > 0) {
-                typingElement.textContent = currentText.substring(0, index-1);
-                index--;
-                setTimeout(deleteText, 50);
-            } else {
-                count++;
-                setTimeout(typeText, 500);
-            }
-        }
-        typeText();
-
-        // 3D Tilt Effect
-        VanillaTilt.init(document.querySelectorAll('.project-card'), {
-            max: 8,
-            speed: 300,
-            glare: true,
-            'max-glare': 0.2
-        });
-
-        // Dynamic Cursor
-        document.addEventListener('mousemove', (e) => {
-            document.documentElement.style.setProperty('--x', `${e.clientX}px`);
-            document.documentElement.style.setProperty('--y', `${e.clientY}px`);
-        });
-
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
