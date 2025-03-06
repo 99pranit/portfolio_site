@@ -1,105 +1,77 @@
-/* scripts.js */
+document.addEventListener('DOMContentLoaded', () => {
+  const contentDiv = document.getElementById('content');
+  const navLinks = document.querySelectorAll('.nav-link');
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      target.scrollIntoView({ behavior: 'smooth' });
-    });
-  });
-  
-  // Dark Mode Toggle Implementation
-  const darkModeToggle = document.getElementById('darkModeToggle');
-  // Apply dark mode if previously enabled
-  if (localStorage.getItem('darkMode') === 'enabled') {
-    document.body.classList.add('dark');
+  // Function to load section content
+  function loadSection(section) {
+      let html = '';
+      switch (section) {
+          case 'home':
+              html = `
+                  <div class="section active" id="home">
+                      <h1>Welcome to My Portfolio</h1>
+                      <p>Hi, I'm Pranit Das, an aspiring Data Scientist and AI Engineer.</p>
+                  </div>
+              `;
+              break;
+          case 'about':
+              html = `
+                  <div class="section active" id="about">
+                      <h2>About Me</h2>
+                      <p>Aspiring Data Scientist and AI Engineer with a strong foundation in data analytics, machine learning, and data visualization.</p>
+                      <h3>Education</h3>
+                      <p>Master of Technology in Computer Science, National Institute of Technology, Durgapur, Expected Jun 2026, GPA 9.18/10</p>
+                      <h3>Work Experience</h3>
+                      <p>Analyst - Data Engineer at MathCo., Jun 2022 – Oct 2023</p>
+                  </div>
+              `;
+              break;
+          case 'portfolio':
+              html = `
+                  <div class="section active" id="portfolio">
+                      <h2>Portfolio</h2>
+                      <div class="portfolio-grid">
+                          ${generatePortfolio()}
+                      </div>
+                  </div>
+              `;
+              break;
+          case 'contact':
+              html = `
+                  <div class="section active" id="contact">
+                      <h2>Contact Me</h2>
+                      <p>Email: 99pranitd@gmail.com</p>
+                      <p>Phone: +91 9348394440</p>
+                      <p>LinkedIn: <a href="https://www.linkedin.com/in/pranit-das-87739a230" target="_blank">Pranit Das</a></p>
+                  </div>
+              `;
+              break;
+          default:
+              html = '<p>Section not found.</p>';
+      }
+      contentDiv.innerHTML = html;
   }
-  darkModeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    if (document.body.classList.contains('dark')) {
-      localStorage.setItem('darkMode', 'enabled');
-    } else {
-      localStorage.setItem('darkMode', 'disabled');
-    }
-  });
-  
-  // Projects data array – update this array to add more projects or modify GitHub links
-  const projects = [
-    {
-      title: "Indoor Sound Classification",
-      description: "Collaborated in a 4-person team to execute a deep learning model for classifying indoor sounds. Quantised and pruned the model for efficient deployment on Raspberry Pi.",
-      github: "https://github.com/99pranit/indoor-sound-classification"
-    },
-    {
-      title: "Amazon Product Review Score",
-      description: "Created a CNN-RNN hybrid deep learning model to classify reviews as positive or negative. Web scraped amazon product reviews and calculated aggregate scores.",
-      github: "https://github.com/99pranit/amazon-product-review-score"
-    },
-    {
-      title: "Movie Genre Classification",
-      description: "Developed a CNN-based model to classify genres from posters; trained and validated on the IMDb dataset with 91% accuracy. Deployed using Streamlit and a dockerized container.",
-      github: "https://github.com/99pranit/movie-genre-classification"
-    }
-  ];
-  
-  // Dynamically create and insert project cards into the page
-  function loadProjects() {
-    const container = document.getElementById('projects-container');
-    projects.forEach(project => {
-      // Create project card element
-      const card = document.createElement('div');
-      card.classList.add('project-card');
-  
-      // Project title
-      const title = document.createElement('h3');
-      title.textContent = project.title;
-      card.appendChild(title);
-  
-      // Project description
-      const desc = document.createElement('p');
-      desc.textContent = project.description;
-      card.appendChild(desc);
-  
-      // GitHub link button
-      const link = document.createElement('a');
-      link.href = project.github;
-      link.textContent = "View on GitHub";
-      link.classList.add('btn');
-      link.target = "_blank";
-      card.appendChild(link);
-  
-      // Append card to container
-      container.appendChild(card);
-    });
+
+  // Function to generate portfolio items from data.js
+  function generatePortfolio() {
+      return projects.map(project => `
+          <div class="project">
+              <h3>${project.title}</h3>
+              <p>${project.description}</p>
+              <a href="${project.github}" target="_blank">GitHub Link</a>
+          </div>
+      `).join('');
   }
-  
-  // Load projects and initialize animations once the DOM is fully loaded
-  window.addEventListener('DOMContentLoaded', () => {
-    loadProjects();
-  
-    // GSAP animation for sections using ScrollTrigger
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.utils.toArray('.animate').forEach(section => {
-      gsap.fromTo(section, 
-        { opacity: 0, y: 20 }, 
-        { opacity: 1, y: 0, duration: 1, ease: "power2.out", 
-          scrollTrigger: {
-            trigger: section,
-            start: "top 80%",
-            toggleActions: "play none none none"
-          }
-        }
-      );
-    });
+
+  // Handle navigation clicks
+  navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const section = link.getAttribute('href').substring(1);
+          loadSection(section);
+      });
   });
-  
-  // Handle the contact form submission (simulated response)
-  const contactForm = document.getElementById('contact-form');
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const formResponse = document.getElementById('form-response');
-    formResponse.textContent = "Thank you for reaching out! I'll get back to you soon.";
-    contactForm.reset();
-  });
-  
+
+  // Load home section by default
+  loadSection('home');
+});
