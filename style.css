@@ -1,10 +1,10 @@
 /* ======= Base Styles ======= */
 :root {
   /* Primary Color Scheme */
-  --primary-color: #6366f1;
-  --primary-dark: #4f46e5;
-  --primary-light: #818cf8;
-  --secondary-color: #10b981;
+  --primary-color: #ffab66;
+  --primary-dark: #ff9839;
+  --primary-light: #fbb679;
+  --secondary-color: #ffea8b;
   
   /* Text Colors */
   --text-dark: #1f2937;
@@ -12,9 +12,9 @@
   --text-muted: #6b7280;
   
   /* Background Colors */
-  --bg-dark: #111827;
+  --bg-dark: #271c11;
   --bg-light: #ffffff;
-  --bg-accent: #f3f4f6;
+  --bg-accent: #f6f5f3;
   
   /* Other Variables */
   --border-radius: 8px;
@@ -22,9 +22,9 @@
   --transition: all 0.3s ease;
   
   /* Dark Mode Variables (will be applied via JS) */
-  --dark-bg: #0f172a;
-  --dark-card: #1e293b;
-  --dark-border: #334155;
+  --dark-bg: #2a1e0f;
+  --dark-card: #3b2f1e;
+  --dark-border: #554a33;
 }
 
 /* Default Light Theme */
