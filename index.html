@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranit Das - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lucide/1.28.0/umd/lucide.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="gradient-text">&lt;Pranit/&gt;</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button id="resume-btn" class="resume-btn">
+                    <i data-lucide="download"></i>
+                    <span>Resume</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="availability-badge">
+                <i data-lucide="zap"></i>
+                <span>Available for opportunities</span>
+            </div>
+            <h1 class="hero-title">Pranit Das</h1>
+            <div class="typing-container">
+                <h2 id="typing-text" class="typing-text"></h2>
+            </div>
+            <p class="hero-description">
+                Transforming complex data into <span class="highlight-cyan">intelligent solutions</span> through 
+                <span class="highlight-purple"> machine learning</span>, 
+                <span class="highlight-pink"> deep learning</span>, and 
+                <span class="highlight-cyan"> data engineering</span>
+            </p>
+            <div class="hero-buttons">
+                <a href="mailto:99pranitd@gmail.com" class="btn-primary">
+                    <i data-lucide="mail"></i>
+                    <span>Let's Connect</span>
+                    <i data-lucide="arrow-right"></i>
+                </a>
+                <button class="btn-secondary" id="resume-btn-2">
+                    <i data-lucide="download"></i>
+                    <span>Download Resume</span>
+                    <i data-lucide="arrow-right"></i>
+                </button>
+                <a href="https://github.com/pranitdas" class="btn-secondary" target="_blank">
+                    <i data-lucide="github"></i>
+                    <span>View Work</span>
+                </a>
+            </div>
+            <button class="scroll-down" onclick="scrollToSection('experience')">
+                <i data-lucide="chevron-down"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <i data-lucide="briefcase"></i>
+                Experience
+            </h2>
+            <div class="experience-timeline">
+                <!-- Experience items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title">
+                <i data-lucide="code"></i>
+                Skills
+            </h2>
+            <div class="skills-grid">
+                <!-- Skills will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <i data-lucide="rocket"></i>
+                Projects
+            </h2>
+            <div class="project-filters">
+                <!-- Filters will be populated by JavaScript -->
+            </div>
+            <div class="projects-grid">
+                <!-- Projects will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title">
+                <i data-lucide="graduation-cap"></i>
+                Education
+            </h2>
+            <div class="education-grid">
+                <!-- Education items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Let's Build Something Amazing</h2>
+            <p class="contact-description">
+                Open to discussing innovative projects, research collaborations, and full-time opportunities
+            </p>
+            <div class="contact-grid">
+                <a href="mailto:99pranitd@gmail.com" class="contact-card">
+                    <i data-lucide="mail"></i>
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value">99pranitd@gmail.com</span>
+                </a>
+                <a href="tel:+919348394440" class="contact-card">
+                    <i data-lucide="phone"></i>
+                    <span class="contact-label">Phone</span>
+                    <span class="contact-value">+91-9348394440</span>
+                </a>
+                <a href="https://www.linkedin.com/in/pranitdas" class="contact-card" target="_blank">
+                    <i data-lucide="linkedin"></i>
+                    <span class="contact-label">LinkedIn</span>
+                    <span class="contact-value">Let's Connect</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/pranitdas" target="_blank">
+                    <i data-lucide="github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/pranitdas" target="_blank">
+                    <i data-lucide="linkedin"></i>
+                </a>
+                <a href="mailto:99pranitd@gmail.com">
+                    <i data-lucide="mail"></i>
+                </a>
+            </div>
+            <p>Built with <span class="heart">♥</span> using HTML, CSS, and JavaScript</p>
+            <p class="copyright">© 2024 Pranit Das. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/1.28.0/umd/lucide.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
