@@ -1,43 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Research Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Pranit Das - AI Engineer & Data Scientist specializing in machine learning, data analytics, and AI solutions">
+  <meta name="keywords" content="AI Engineer, Data Scientist, Machine Learning, Portfolio, Pranit Das">
+  <meta name="author" content="Pranit Das">
+  <meta property="og:title" content="Pranit Das | AI Engineer & Data Scientist">
+  <meta property="og:description" content="Portfolio showcasing AI and data science projects by Pranit Das">
+  <meta property="og:type" content="website">
+  <title>Pranit Das | AI Engineer & Data Scientist</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <section id="portfolio">
-        <h1>My Research Portfolio</h1>
-        
-        <!-- Filter Buttons -->
-        <div id="filter-buttons">
-            <button class="btn active" onclick="filterSelection('all')">Show All</button>
-            <button class="btn" onclick="filterSelection('nlp')">NLP</button>
-            <button class="btn" onclick="filterSelection('vision')">Computer Vision</button>
-            <button class="btn" onclick="filterSelection('rl')">Reinforcement Learning</button>
+  <!-- Skip to content link for accessibility -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Loading Screen -->
+  <div class="loader-container" aria-hidden="true">
+    <div class="loader"></div>
+    <p class="loading-text">Loading...</p>
+  </div>
+
+  <!-- Header with Navigation -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <a href="#home">PD</a>
+      </div>
+      <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+        <span class="sr-only">Menu</span>
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav id="primary-navigation" class="primary-navigation">
+        <ul role="list" class="nav-list">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="https://drive.google.com/file/d/1mtxsIVvZ_LZHlUhob4nf-NCP5bEZghGY/view?usp=sharing" class="nav-link resume-btn" target="_blank">Resume <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero Section -->
+    <section class="hero" id="home" aria-label="introduction">
+      <div id="particles" class="particles-container" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-text" data-aos="fade-up">
+          <p class="pre-heading">Hello, I'm</p>
+          <h1>Pranit Das</h1>
+          <div class="animated-subtitle">
+            <span class="typing-text" aria-live="polite"></span>
+          </div>
+          <p class="hero-description">
+            Transforming complex data into intelligent solutions for real-world problems.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="cta-btn magnetic">
+              <span>Explore Projects</span>
+              <div class="hover-effect" aria-hidden="true"></div>
+            </a>
+            <a href="#contact" class="cta-btn secondary magnetic">
+              <span>Get in Touch</span>
+              <div class="hover-effect" aria-hidden="true"></div>
+            </a>
+          </div>
+          <div class="social-icons">
+            <a href="https://github.com/pranit-das" target="_blank" aria-label="GitHub Profile">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/pranit-das-87739a230" target="_blank" aria-label="LinkedIn Profile">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/pranitdas" target="_blank" aria-label="Twitter Profile">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="mailto:99pranitd@gmail.com" aria-label="Email Me">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </div>
         </div>
-        
-        <!-- Portfolio Gallery Grid -->
-        <div class="row">
-            <div class="column nlp">
-                <div class="content">
-                    <img src="/w3images/mountains.jpg" alt="NLP Project 1" style="width:100%">
-                    <h4>Sentiment Analysis Model</h4>
-                    <p>Implemented a transformer-based model for social media sentiment...</p>
-                </div>
-            </div>
-            <div class="column vision">
-                <div class="content">
-                    <img src="/w3images/lights.jpg" alt="Vision Project 1" style="width:100%">
-                    <h4>Object Detection System</h4>
-                    <p>Developed a real-time object detection pipeline using YOLOv5...</p>
-                </div>
-            </div>
-            <!-- Add more project items here -->
-        </div>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="mouse"></div>
+        <p>Scroll Down</p>
+      </div>
     </section>
-    
-    <script src="script.js"></script>
+
+    <!-- About Section -->
+    <section id="about" class="section" data-aos="fade-up" aria-labelledby="about-heading">
+      <div class="container">
+        <h2 id="about-heading" class="section-heading">About Me</h2>
+        <div class="about-content">
+          <div class="about-image" data-aos="fade-right">
+            <img src="https://raw.githubusercontent.com/99pranit/portfolio_site/main/image/DSC_9488%20aa%20aa.jpg" alt="Pranit Das" loading="lazy">
+          </div>
+          <div class="about-text" data-aos="fade-left">
+            <p>
+              I am Pranit Das, an aspiring AI Engineer and Data Scientist with a strong foundation in data analytics, machine learning, and data visualization. Currently pursuing my Master's in Computer Science with a specialization in Data Science and AI at NIT Durgapur, I have practical industry experience as a Data Engineer at MathCo.
+            </p>
+            <p>
+              My journey in AI started during my undergraduate studies, where I developed a passion for using data to solve complex problems. Since then, I've worked on various projects ranging from predictive analytics to computer vision applications.
+            </p>
+            <p>
+              I believe in the power of AI to transform industries and improve lives. My goal is to create innovative, ethical, and efficient solutions that make a positive impact on the world.
+            </p>
+            <div class="about-cta">
+              <a href="https://raw.githubusercontent.com/99pranit/portfolio_site/main/image/resume.pdf" class="btn" target="_blank">Download Resume <i class="fa-solid fa-download"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section" data-aos="fade-up" aria-labelledby="skills-heading">
+      <div class="container">
+        <h2 id="skills-heading" class="section-heading">My Skills</h2>
+        <div class="skills-categories">
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+            <h3><i class="fas fa-code"></i> Programming</h3>
+            <div class="skills-group">
+              <div class="skill-item">
+                <span>Python</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span>SQL</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+            <h3><i class="fas fa-brain"></i> Machine Learning</h3>
+            <div class="skills-group">
+              <div class="skill-item">
+                <span>TensorFlow</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span>Scikit-Learn</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span>Hugging Face</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span>Transfer Learning</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+            <h3><i class="fas fa-database"></i> Data Engineering</h3>
+            <div class="skills-group">
+              <div class="skill-item">
+                <span>Pandas</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 95%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span>Docker</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 70%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span>GCP</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 60%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section" data-aos="fade-up" aria-labelledby="projects-heading">
+      <div class="container">
+        <h2 id="projects-heading" class="section-heading">Projects</h2>
+        <div class="projects-filter" data-aos="fade-up">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+          <button class="filter-btn" data-filter="sequential">Sequential</button>
+          <button class="filter-btn" data-filter="computer-vision">Computer Vision</button>
+          <button class="filter-btn" data-filter="nlp">NLP</button>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card" data-category="machine-learning" data-aos="fade-up">
+             <!-- <div class="project-image">
+              <img src="project1.jpg" alt="Amazon Product Review Calulator" loading="lazy">
+            </div> -->
+            <div class="project-content">
+              <h3>Customer Churn Prediction Calculator</h3>
+              <p>This project predicts customer churn for telecom companies using the Kaggle Telecom Customer Churn Prediction Dataset.</p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>Streamlit</span>
+                <span>Docker</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/99pranit/Customer-Churn-Probability-Calculator" class="project-link" target="_blank" aria-label="View code on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <!-- <a href="https://herokuapp.com" class="project-link" target="_blank" aria-label="View live demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a> -->
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-category="nlp" data-aos="fade-up">
+            <div class="project-content">
+              <h3>Amazon Product Review Calulator</h3>
+              <p>Calculate Amazon product score based on positive and negative review.</p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>Streamlit</span>
+                <span>TensorFlow</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/99pranit/amazon_review_score_calculator" class="project-link" target="_blank" aria-label="View code on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+          <!-- More projects will be added dynamically via JavaScript -->
+        </div>
+        <div class="projects-cta" data-aos="fade-up">
+          <a href="https://github.com/99pranit" class="btn" target="_blank">
+            View More on GitHub <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section" data-aos="fade-up" aria-labelledby="experience-heading">
+      <div class="container">
+        <h2 id="experience-heading" class="section-heading">Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Data Engineer</h3>
+              <h4>MathCo</h4>
+              <p class="timeline-date">June 2022 - October 2023</p>
+              <p>Developed and maintained data pipelines for large-scale analytics projects. Implemented ETL processes and built interactive dashboards for business intelligence.</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Analyst - Intern</h3>
+              <h4>Tech Innovations Ltd.</h4>
+              <p class="timeline-date">Jan 2022 - May 2022</p>
+              <p>Worked on predictive modeling projects and collaborated with cross-functional teams to implement machine learning solutions for business problems.</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Teaching/Research Assistant</h3>
+              <h4>NIT Durgapur</h4>
+              <p class="timeline-date">Aug 2021 - Dec 2021</p>
+              <p>Assisted in research on computer vision algorithms and published a paper on efficient object detection techniques in low-light conditions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" data-aos="fade-up" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 id="contact-heading" class="section-heading">Contact Me</h2>
+        <div class="contact-content">
+          <div class="contact-info" data-aos="fade-right">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3>Email</h3>
+                <a href="mailto:99pranitd@gmail.com">99pranitd@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Location</h3>
+                <p>Durgapur, West Bengal, India</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-linkedin"></i>
+              <div>
+                <h3>LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/pranit-das-87739a230" target="_blank">Connect with me</a>
+              </div>
+            </div>
+            <div class="contact-socials">
+              <a href="https://github.com/99pranit" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://x.com/99pranitd" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.instagram.com/99pranit/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+          <div class="contact-form" data-aos="fade-left">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn submit-btn">
+                Send Message <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <a href="#home">Pranit Das</a>
+        </div>
+        <p class="footer-tagline">AI Engineer & Data Scientist</p>
+        <div class="footer-social">
+          <a href="https://github.com/99pranit" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/pranit-das-87739a230" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://x.com/99pranitd" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="mailto:99pranitd@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2025</span> Pranit Das. All rights reserved.</p>
+        <button id="back-to-top" aria-label="Back to top">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Consent -->
+  <div class="cookie-consent" id="cookieConsent">
+    <p>This website uses cookies to ensure you get the best experience.</p>
+    <div class="cookie-buttons">
+      <button id="acceptCookies" class="btn-sm">Accept</button>
+      <button id="cookieSettings" class="btn-sm secondary">Settings</button>
+    </div>
+  </div>
+
+  <!-- Theme Toggle -->
+  <button id="theme-toggle" aria-label="Toggle dark/light mode">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
