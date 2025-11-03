@@ -1,101 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pranit Das – Data Scientist Portfolio</title>
-  <!-- Link Google Fonts, icons here -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <!-- Navigation -->
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#education">Education</a>
-    <a href="#extra">Extra-Curricular</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <!-- Home / Hero -->
-  <header id="home">
-    <h1>Pranit Das</h1>
-    <p>AI Engineer & Data Scientist</p>
-    <p><a href="Resume_Technical.pdf" download>📄 Download Resume</a></p>
-  </header>
-
-  <!-- Experience -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <h3>Mathco – Analyst, Data Engineer (Jun 2022 – Oct 2023)</h3>
-    <ul>
-      <li>Built and maintained a sales Tableau dashboard, improving productivity by 20%.</li>
-      <li>Designed ETL pipelines to aggregate unstructured data from multiple sources.</li>
-      <!-- more bullets... -->
-    </ul>
-    <!-- Add other roles similarly -->
-  </section>
-
-  <!-- Projects (filterable example) -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <!-- Filter Buttons -->
-    <div id="project-filters">
-      <button onclick="filterProjects('all')">All</button>
-      <button onclick="filterProjects('ai')">AI</button>
-      <button onclick="filterProjects('tinyml')">TinyML</button>
-    </div>
-    <!-- Project Cards -->
-    <div class="project-card ai">
-      <h3>Multi-Prompt Ensembles (AI in Education)</h3>
-      <p>Role-based question classification, improving robustness (ACC 0.79).</p>
-    </div>
-    <div class="project-card tinyml">
-      <h3>Human Activity Detection (TinyML)</h3>
-      <p>Classified movements using an ESP32-S3 sensor (92% accuracy).</p>
-    </div>
-    <!-- more projects... -->
-  </section>
-
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Technical:</strong> Python, Java, SQL, Git, Jira, LaTeX</li>
-      <li><strong>AI/ML:</strong> ML, DL (TensorFlow), Hugging Face, LLMs, TinyML</li>
-      <li><strong>Cloud/Data:</strong> GCP (BigQuery, DataProc), Snowflake, Airflow, Docker</li>
-    </ul>
-  </section>
-
-  <!-- Education -->
-  <section id="education">
-    <h2>Education</h2>
-    <h3>NIT Durgapur – M.Tech in CS (DS & AI), 2024–Present</h3>
-    <h3>KIIT Bhubaneswar – B.Tech (Aerospace + CS minor), 2018–2022</h3>
-  </section>
-
-  <!-- Extra-Curricular -->
-  <section id="extra">
-    <h2>Extra-Curricular</h2>
-    <p><strong>Soft Skills:</strong> Leadership, Problem-Solving, Teamwork, Innovation, Research</p>
-    <p><strong>Awards:</strong> Mathco Value Award (2023), Math Olympiad (Class 11 Champion), etc.</p>
-    <p><strong>Hobbies:</strong> Football, Trading, Tech Reading, Fitness, Volunteering</p>
-  </section>
-
-  <!-- Contact Form -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <!-- Form (using Formspree) -->
-    <form action="https://formspree.io/f/yourFormID" method="POST">
-      <input type="email" name="_replyto" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p>Or email me at <a href="mailto:99pranitd@gmail.com">99pranitd@gmail.com</a></p>
-  </section>
-
-  <script src="js/script.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pranit Das — Portfolio</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

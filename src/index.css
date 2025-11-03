@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme variables (change --primary to switch theme) */
+:root{
+  --primary: #F48037; /* Sun orange */
+  --bg: #0f1724; /* slate-950-ish */
+  --muted: #94a3b8;
+}
+
+/* Global */
+html, body, #root {
+  height: 100%;
+  background-color: var(--bg);
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Arial';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility helpers */
+.bg-primary { background-color: var(--primary); }
+.text-primary { color: var(--primary); }
+
+/* Glass / frosted panels */
+.glass {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(6px);
+}
+
+/* Smooth scrolling */
+html { scroll-behavior: smooth; }
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn { animation: fadeIn 0.6s ease both; }
+
+/* Consistent gradient helper */
+.gradient-primary {
+  background: linear-gradient(90deg, rgba(244,128,55,1) 0%, rgba(244,128,55,0.9) 50%, rgba(244,128,55,1) 100%);
+}
