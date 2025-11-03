@@ -100,7 +100,7 @@ const Portfolio = () => {
   // Resume download handler
   const handleResumeDownload = () => {
     // Replace with your actual resume URL
-    const resumeUrl = '/Resume_Technical.pdf';
+    const resumeUrl = process.env.PUBLIC_URL + '/Resume_Technical.pdf';;
     const link = document.createElement('a');
     link.href = resumeUrl;
     link.download = 'Pranit_Das_Resume.pdf';
