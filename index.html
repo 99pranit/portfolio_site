@@ -3,112 +3,117 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Pranit Das — AI Engineer & Data Scientist</title>
-  <meta name="description" content="Portfolio of Pranit Das - AI Engineer & Data Scientist">
+  <title>Pranit Das — Portfolio</title>
+  <meta name="description" content="Pranit Das — AI Engineer & Data Scientist. Projects in ML, NLP, TinyML and dashboards.">
 
-  <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts & icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- AOS CSS (Animate on Scroll) -->
+  <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Skip link -->
+  <!-- Skip to content -->
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- Loader -->
-  <div class="loader-container" id="loader" aria-hidden="true">
+  <div id="loader" class="loader-container" aria-hidden="false">
     <div class="loader" role="status" aria-label="Loading"></div>
-    <p class="loading-text">Preparing the experience…</p>
+    <p class="loading-text">Preparing your experience…</p>
   </div>
 
   <!-- Header -->
-  <header class="header" id="header">
-    <div class="container">
-      <div class="logo"><a href="#home">PD</a></div>
-
-      <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" id="mobileToggle">
-        <span class="sr-only">Toggle navigation</span>
-        <i class="fa-solid fa-bars"></i>
-      </button>
-
-      <nav id="primary-navigation" class="primary-navigation" aria-label="Primary">
+  <header class="header" id="header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="#home" aria-label="Pranit Das homepage">PD</a>
+      <nav id="primary-navigation" class="nav" role="navigation" aria-label="Primary">
         <ul role="list" class="nav-list" id="navList">
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-          <li><a href="resume.pdf" class="nav-link resume-btn" target="_blank" rel="noopener">Resume <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+          <li><a class="nav-link" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+          <li><a class="nav-link resume-btn" href="resume.pdf" target="_blank" rel="noopener">Resume</a></li>
         </ul>
       </nav>
+
+      <button id="mobileToggle" class="mobile-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+      </button>
     </div>
   </header>
 
   <main id="main">
     <!-- HERO -->
-    <section class="hero" id="home" aria-label="home">
+    <section id="home" class="hero" aria-label="home">
       <div id="particles" class="particles-container" aria-hidden="true"></div>
 
-      <div class="hero-content container">
-        <div class="hero-text" data-aos="fade-up">
-          <p class="pre-heading">Hello, I'm</p>
-          <h1>Pranit Das</h1>
-          <div class="animated-subtitle">
-            <span class="typing-text" aria-live="polite"></span>
+      <div class="container hero-inner">
+        <div class="hero-left" data-aos="fade-right">
+          <p class="eyebrow">Hi, I'm</p>
+          <h1 class="hero-title">Pranit Das</h1>
+          <div class="hero-sub">
+            <span id="typed"></span>
           </div>
-          <p class="hero-description">I build ML systems, dashboards, and research-driven products that people use.</p>
+          <p class="hero-desc">AI Engineer & Data Scientist. I build production-ready ML systems, dashboards and research-driven solutions.</p>
 
-          <div class="hero-cta">
-            <a href="#projects" class="cta-btn magnetic" id="ctaProjects"><span>Explore Projects</span></a>
-            <a href="#contact" class="cta-btn secondary magnetic"><span>Get in Touch</span></a>
-          </div>
-
-          <div class="social-icons" aria-hidden="false">
-            <a href="https://github.com/99pranit" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/pranit-das-87739a230" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="mailto:99pranitd@gmail.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary magnetic">See Projects</a>
+            <a href="#contact" class="btn btn-ghost magnetic">Work with me</a>
+            <a href="resume.pdf" class="btn btn-outline" download>Download Resume</a>
           </div>
         </div>
+
+        <aside class="hero-right" data-aos="fade-left">
+          <div class="profile-card">
+            <div class="profile-photo">
+              <img id="profileImg" src="assets/profile.jpg" alt="Pranit Das" loading="lazy"
+                   onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22240%22 height=%22240%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23fff7ed%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2236%22 fill=%22%23f97316%22 font-family=%22sans-serif%22>PD</text></svg>';">
+            </div>
+            <div class="profile-info">
+              <div class="name">Pranit Das</div>
+              <div class="role">AI Engineer & Data Scientist</div>
+            </div>
+
+            <div class="counters">
+              <div class="counter">
+                <div class="count" data-target="8">0</div>
+                <div class="label">Publications</div>
+              </div>
+              <div class="counter">
+                <div class="count" data-target="12">0</div>
+                <div class="label">Projects</div>
+              </div>
+              <div class="counter">
+                <div class="count" data-target="2">0</div>
+                <div class="label">Years</div>
+              </div>
+            </div>
+          </div>
+        </aside>
       </div>
 
-      <div class="scroll-indicator" aria-hidden="true">
-        <div class="mouse"></div>
-        <p>Scroll</p>
-      </div>
+      <div class="scroll-tip" aria-hidden="true">Scroll ↓</div>
     </section>
 
     <!-- ABOUT -->
     <section id="about" class="section" data-aos="fade-up" aria-labelledby="about-heading">
       <div class="container">
-        <h2 id="about-heading" class="section-heading">About Me</h2>
-        <div class="about-content">
-          <div class="about-image" data-aos="fade-right">
-            <img src="assets/profile.jpg" alt="Pranit Das" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22240%22 height=%22240%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23fff7ed%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2236%22 fill=%22%23f97316%22 font-family=%22sans-serif%22>PD</text></svg>';">
+        <h2 id="about-heading" class="section-title">About</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>I design and ship ML systems — NLP, TinyML, and dashboards — turning experiments into production work that stakeholders can rely on.</p>
+            <p>My work sits at the intersection of research and engineering: reproducible experiments, model deployment, and clear visualizations.</p>
+            <a href="resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">View Resume</a>
           </div>
-          <div class="about-text" data-aos="fade-left">
-            <p>I’m an AI Engineer & Data Scientist with experience building production ML systems and analytics dashboards. My work spans NLP, TinyML, and applied ML research.</p>
-            <p>Currently pursuing research & development with a focus on robust ML pipelines and production-ready LLM workflows.</p>
-
-            <div class="about-cta">
-              <a href="resume.pdf" class="btn" target="_blank" rel="noopener">Download Resume <i class="fa-solid fa-download"></i></a>
-            </div>
+          <div class="about-stats">
+            <!-- small highlights -->
+            <div class="stat"><div class="stat-num">20+</div><div class="stat-label">K lines of ETL</div></div>
+            <div class="stat"><div class="stat-num">100+</div><div class="stat-label">Models experimented</div></div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section" data-aos="fade-up" aria-labelledby="skills-heading">
-      <div class="container">
-        <h2 id="skills-heading" class="section-heading">Skills</h2>
-        <div class="skills-categories">
-          <!-- skill cards omitted for brevity; keep same structure as your uploaded file -->
-          <!-- I'll leave the rest of content intact (projects + experience + contact) -->
         </div>
       </div>
     </section>
@@ -116,85 +121,119 @@
     <!-- PROJECTS -->
     <section id="projects" class="section" data-aos="fade-up" aria-labelledby="projects-heading">
       <div class="container">
-        <h2 id="projects-heading" class="section-heading">Projects</h2>
+        <h2 id="projects-heading" class="section-title">Projects</h2>
 
-        <div class="projects-filter" aria-label="project filters" role="toolbar">
-          <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
-          <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
-          <button class="filter-btn" data-filter="nlp">NLP</button>
-          <button class="filter-btn" data-filter="computer-vision">Computer Vision</button>
-          <input id="projectSearch" type="search" placeholder="Search projects..." aria-label="Search projects">
+        <div class="projects-controls">
+          <div class="filters" role="toolbar" aria-label="Project filters">
+            <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-btn" data-filter="ai">AI</button>
+            <button class="filter-btn" data-filter="iot">IoT</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+          </div>
+
+          <div class="search-wrap">
+            <input id="projectSearch" type="search" placeholder="Search projects..." aria-label="Search projects">
+          </div>
         </div>
 
-        <div class="projects-grid" id="projectsGrid" role="list" aria-live="polite">
-          <!-- example project cards: add the same structure you uploaded (images optional) -->
-          <article class="project-card" data-category="machine-learning" tabindex="0" role="listitem">
-            <div class="project-image">
-              <img src="assets/projects/project1.jpg" alt="Customer Churn Prediction" loading="lazy">
-            </div>
-            <div class="project-content">
-              <h3>Customer Churn Prediction Calculator</h3>
-              <p>Predict churn using feature engineering and robust model pipelines.</p>
-              <div class="project-tags"><span>Python</span><span>Streamlit</span></div>
-              <div class="project-links">
-                <a href="https://github.com/99pranit/Customer-Churn-Probability-Calculator" class="project-link" target="_blank" rel="noopener" aria-label="Code on GitHub"><i class="fab fa-github"></i></a>
+        <div id="projectsGrid" class="projects-grid" role="list" aria-live="polite">
+          <!-- Project cards: replace text/images with your own. Keep data-category and data-image attributes -->
+          <article class="project-card" role="listitem" data-category="ai" data-image="assets/projects/project1.jpg" tabindex="0">
+            <div class="project-image"><img src="assets/projects/project1.jpg" alt="Multi-Prompt Ensemble" loading="lazy"></div>
+            <div class="project-body">
+              <h3>Multi-Prompt Technique Ensemble</h3>
+              <p class="project-desc">Classifying questions using multi-prompt ensembles and TF-POS weighting.</p>
+              <div class="project-meta">
+                <span class="tag">Python</span>
+                <span class="tag">LLM</span>
+                <a class="icon-link" href="https://github.com/99pranit" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
               </div>
             </div>
           </article>
 
-          <article class="project-card" data-category="nlp" tabindex="0" role="listitem">
-            <div class="project-image">
-              <img src="assets/projects/project2.jpg" alt="Amazon Review Calculator" loading="lazy">
-            </div>
-            <div class="project-content">
-              <h3>Amazon Product Review Calculator</h3>
-              <p>Review scoring pipeline built with Streamlit and TensorFlow components.</p>
-              <div class="project-tags"><span>Python</span><span>TensorFlow</span></div>
-              <div class="project-links">
-                <a href="https://github.com/99pranit/amazon_review_score_calculator" class="project-link" target="_blank" rel="noopener" aria-label="Code on GitHub"><i class="fab fa-github"></i></a>
+          <article class="project-card" role="listitem" data-category="iot" data-image="assets/projects/project2.jpg" tabindex="0">
+            <div class="project-image"><img src="assets/projects/project2.jpg" alt="Human Activity Detection" loading="lazy"></div>
+            <div class="project-body">
+              <h3>Human Activity Detection</h3>
+              <p class="project-desc">ESP32-S3 sensor pipeline with TinyML hierarchical classifier.</p>
+              <div class="project-meta">
+                <span class="tag">TinyML</span>
+                <span class="tag">TensorFlow</span>
+                <a class="icon-link" href="#" aria-hidden="true"><i class="fas fa-external-link-alt"></i></a>
               </div>
             </div>
           </article>
 
-        </div> <!-- /projects-grid -->
+          <article class="project-card" role="listitem" data-category="web" data-image="assets/projects/project3.jpg" tabindex="0">
+            <div class="project-image"><img src="assets/projects/project3.jpg" alt="Retail Sales Dashboard" loading="lazy"></div>
+            <div class="project-body">
+              <h3>Retail Sales Dashboard</h3>
+              <p class="project-desc">Tableau dashboards and ETL pipelines to track KPIs.</p>
+              <div class="project-meta">
+                <span class="tag">Tableau</span>
+                <span class="tag">ETL</span>
+                <a class="icon-link" href="#" aria-hidden="true"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE & CONTACT (kept similar to uploaded structure) -->
-    <!-- ... keep your content here as in your uploaded file ... -->
+    <!-- CONTACT -->
+    <section id="contact" class="section" data-aos="fade-up" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 id="contact-heading" class="section-title">Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p>Email: <a href="mailto:99pranitd@gmail.com">99pranitd@gmail.com</a></p>
+            <p>Location: Durgapur, West Bengal, India</p>
+            <div class="socials">
+              <a href="https://github.com/99pranit" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/pranit-das-87739a230" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <form id="contactForm" class="contact-form" aria-label="Contact form">
+            <input name="name" type="text" placeholder="Your name" required>
+            <input name="email" type="email" placeholder="Your email" required>
+            <textarea name="message" rows="5" placeholder="Message" required></textarea>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Send</button>
+              <small class="note">No backend? Form will open your email client as fallback.</small>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-  <!-- Lightbox modal -->
+  <!-- Lightbox -->
   <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image preview">
     <button id="lightboxClose" class="lightbox-close" aria-label="Close preview">✕</button>
     <img id="lightboxImg" src="" alt="Preview">
   </div>
 
-  <!-- Footer (kept similar) -->
+  <!-- Back to top -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top"><i class="fa fa-arrow-up"></i></button>
+
+  <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo"><a href="#home">Pranit Das</a></div>
-        <p class="footer-tagline">AI Engineer & Data Scientist</p>
-        <div class="footer-social">
-          <a href="https://github.com/99pranit" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/pranit-das-87739a230" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; <span id="current-year"></span> Pranit Das</p>
-        <button id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Pranit Das</div>
+      <div class="footer-links">
+        <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
       </div>
     </div>
   </footer>
 
-  <!-- Cookie consent, theme toggle kept (structure matching uploaded file) -->
-
-  <!-- External scripts (only those Claude used and we rely on) -->
+  <!-- External libs -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  <!-- Main script -->
   <script src="scripts.js"></script>
 </body>
 </html>
