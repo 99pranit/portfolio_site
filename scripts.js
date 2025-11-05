@@ -1,5 +1,11 @@
 // script.js - Complete fixed version
 document.addEventListener('DOMContentLoaded', function() {
+  // Hide loading screen immediately
+  const loaderContainer = document.getElementById('loader-container');
+  if (loaderContainer) {
+    loaderContainer.classList.add('hidden');
+  }
+
   // Set current year in footer
   const currentYear = document.getElementById('current-year');
   if (currentYear) {
@@ -183,17 +189,6 @@ document.addEventListener('DOMContentLoaded', function() {
     button.addEventListener("mouseleave", () => {
       button.style.transform = "translate(0, 0)";
     });
-  });
-
-  // Loading Screen
-  window.addEventListener("load", () => {
-    const loaderContainer = document.querySelector(".loader-container");
-    if (loaderContainer) {
-      loaderContainer.style.opacity = "0";
-      setTimeout(() => {
-        loaderContainer.style.display = "none";
-      }, 500);
-    }
   });
 
   // Simple scroll animations
