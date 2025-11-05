@@ -1,279 +1,428 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Pranit Das — AI Engineer & Data Scientist</title>
-  <meta name="description" content="Pranit Das — AI Engineer & Data Scientist. ML, NLP, TinyML, dashboards.">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- AOS (scroll animations) -->
-  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
-
-  <!-- Vanilla-Tilt (3D card tilt) -->
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.0/dist/vanilla-tilt.min.js"></script>
-
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Pranit Das - AI Engineer & Data Scientist specializing in machine learning, data analytics, and AI solutions">
+  <meta name="keywords" content="AI Engineer, Data Scientist, Machine Learning, Portfolio, Pranit Das">
+  <meta name="author" content="Pranit Das">
+  <meta property="og:title" content="Pranit Das | AI Engineer & Data Scientist">
+  <meta property="og:description" content="Portfolio showcasing AI and data science projects by Pranit Das">
+  <meta property="og:type" content="website">
+  <title>Pranit Das | AI Engineer & Data Scientist</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="light">
+<body>
+  <!-- Skip to content link for accessibility -->
+  <a href="#main" class="skip-link">Skip to main content</a>
 
-  <a class="skip-link" href="#main">Skip to main content</a>
-
-  <!-- Loader -->
-  <div id="loader" class="loader-container" aria-hidden="false">
-    <div class="loader-spinner" role="status" aria-label="Loading"></div>
-    <div class="loader-text">Loading portfolio…</div>
+  <!-- Loading Screen -->
+  <div class="loader-container" aria-hidden="true">
+    <div class="loader"></div>
+    <p class="loading-text">Loading...</p>
   </div>
 
-  <!-- Header -->
-  <header class="site-header" id="header">
-    <div class="container header-row">
-      <a href="#" class="brand" aria-label="Home">
-        <div class="brand-badge">PD</div>
-        <div class="brand-text">
-          <div class="brand-name">Pranit Das</div>
-          <div class="brand-sub">AI Engineer • Data Scientist</div>
-        </div>
-      </a>
-
-      <nav class="nav" aria-label="Main navigation">
-        <button id="mobileToggle" class="mobile-toggle" aria-expanded="false" aria-controls="navList">☰</button>
-        <ul id="navList" class="nav-list">
-          <li><a class="nav-link" href="#projects">Projects</a></li>
-          <li><a class="nav-link" href="#experience">Experience</a></li>
-          <li><a class="nav-link" href="#skills">Skills</a></li>
-          <li><a class="nav-link" href="#contact">Contact</a></li>
-          <li><a class="resume-btn" href="resume.pdf" download>Resume</a></li>
-          <li><button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌓</button></li>
+  <!-- Header with Navigation -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <a href="#home">PD</a>
+      </div>
+      <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+        <span class="sr-only">Menu</span>
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav id="primary-navigation" class="primary-navigation">
+        <ul role="list" class="nav-list">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="https://drive.google.com/file/d/1mtxsIVvZ_LZHlUhob4nf-NCP5bEZghGY/view?usp=sharing" class="nav-link resume-btn" target="_blank">Resume <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <!-- HERO -->
-    <section id="home" class="hero">
-      <!-- decorative blob -->
-      <svg class="hero-blob" viewBox="0 0 800 600" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-          <linearGradient id="g1" x1="0" x2="1">
-            <stop offset="0" stop-color="#ff7a00"/>
-            <stop offset="1" stop-color="#ffb86b"/>
-          </linearGradient>
-        </defs>
-        <path fill="url(#g1)" opacity="0.12" d="M410,20 C480,10 750,30 760,150 C770,270 640,360 560,420 C480,480 320,520 210,470 C100,420 30,320 40,210 C50,100 340,30 410,20 Z"></path>
-      </svg>
-
-      <div class="container hero-grid">
-        <div class="hero-left" data-aos="fade-right">
-          <p class="pre">Hello, I'm</p>
-          <h1 class="name">Pranit <span class="accent">Das</span></h1>
-          <div class="typed" id="typed">AI Engineer • Data Scientist</div>
-          <p class="lead">I design production-ready ML systems, build dashboards, and convert research into usable tools. I focus on reliability, clarity, and impact.</p>
-
-          <div class="hero-actions">
-            <a class="btn primary magnetic" href="#projects">See Projects</a>
-            <a class="btn ghost" href="#contact">Work with me</a>
-            <a class="btn outline" href="resume.pdf" download>Download CV</a>
+    <!-- Hero Section -->
+    <section class="hero" id="home" aria-label="introduction">
+      <div id="particles" class="particles-container" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="pre-heading">Hello, I'm</p>
+          <h1>Pranit Das</h1>
+          <div class="animated-subtitle">
+            <span class="typing-text" aria-live="polite"></span>
           </div>
-
-          <div class="socials" aria-hidden="false">
-            <a href="https://github.com/99pranit" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
-            <a href="https://www.linkedin.com/in/pranit-das-87739a230" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+          <p class="hero-description">
+            Transforming complex data into intelligent solutions for real-world problems.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="cta-btn magnetic">
+              <span>Explore Projects</span>
+            </a>
+            <a href="#contact" class="cta-btn secondary magnetic">
+              <span>Get in Touch</span>
+            </a>
+          </div>
+          <div class="social-icons">
+            <a href="https://github.com/99pranit" target="_blank" aria-label="GitHub Profile">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/pranit-das-87739a230" target="_blank" aria-label="LinkedIn Profile">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://x.com/99pranitd" target="_blank" aria-label="Twitter Profile">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="mailto:99pranitd@gmail.com" aria-label="Email Me">
+              <i class="fa fa-envelope"></i>
+            </a>
           </div>
         </div>
-
-        <aside class="hero-right" data-aos="fade-left">
-          <div class="profile-card card-3d">
-            <div class="profile-photo">
-              <img src="assets/profile.jpg" alt="Pranit Das" loading="lazy" onerror="this.onerror=null;this.src='assets/placeholder.svg'">
-            </div>
-            <div class="profile-meta">
-              <div class="title">Pranit Das</div>
-              <div class="subtitle">AI Engineer & Data Scientist</div>
-            </div>
-
-            <div class="stats">
-              <div class="stat">
-                <div class="stat-num" data-target="8">0</div>
-                <div class="stat-label">Publications</div>
-              </div>
-              <div class="stat">
-                <div class="stat-num" data-target="12">0</div>
-                <div class="stat-label">Projects</div>
-              </div>
-              <div class="stat">
-                <div class="stat-num" data-target="2">0</div>
-                <div class="stat-label">Years</div>
-              </div>
-            </div>
-          </div>
-        </aside>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="mouse"></div>
+        <p>Scroll Down</p>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section">
+    <!-- About Section -->
+    <section id="about" class="section" aria-labelledby="about-heading">
       <div class="container">
-        <h2 class="section-heading" data-aos="fade-up">Featured Projects</h2>
-
-        <div class="controls" data-aos="fade-up" data-aos-delay="100">
-          <div class="filters" role="toolbar" aria-label="Project filters">
-            <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
-            <button class="filter-btn" data-filter="ai">AI</button>
-            <button class="filter-btn" data-filter="iot">IoT</button>
-            <button class="filter-btn" data-filter="web">Web</button>
+        <h2 id="about-heading" class="section-heading">About Me</h2>
+        <div class="about-content">
+          <div class="about-image">
+            <img src="https://raw.githubusercontent.com/99pranit/portfolio_site/main/image/DSC_9488%20aa%20aa.jpg" alt="Pranit Das" loading="lazy">
           </div>
-
-          <div class="search">
-            <input id="projectSearch" type="search" placeholder="Search projects..." aria-label="Search projects">
+          <div class="about-text">
+            <p>
+              I am Pranit Das, an aspiring AI Engineer and Data Scientist with a strong foundation in data analytics, machine learning, and data visualization. Currently pursuing my Master's in Computer Science with a specialization in Data Science and AI at NIT Durgapur, I have practical industry experience as a Data Engineer at MathCo.
+            </p>
+            <p>
+              My journey in AI started during my undergraduate studies, where I developed a passion for using data to solve complex problems. Since then, I've worked on various projects ranging from predictive analytics to computer vision applications.
+            </p>
+            <p>
+              I believe in the power of AI to transform industries and improve lives. My goal is to create innovative, ethical, and efficient solutions that make a positive impact on the world.
+            </p>
+            <div class="about-cta">
+              <a href="https://drive.google.com/file/d/1mtxsIVvZ_LZHlUhob4nf-NCP5bEZghGY/view?usp=sharing" class="btn" target="_blank">Download Resume <i class="fa-solid fa-download"></i></a>
+            </div>
           </div>
-        </div>
-
-        <div id="projectsGrid" class="projects-grid" role="list" data-aos="fade-up" data-aos-delay="180">
-          <!-- Project cards (replace images/text as you like) -->
-          <article class="project-card card-3d" role="listitem" tabindex="0" data-category="ai" data-image="assets/projects/project1.jpg">
-            <div class="project-media">
-              <img src="assets/projects/project1.jpg" alt="Multi-Prompt Ensemble" loading="lazy" onerror="this.onerror=null;this.src='assets/placeholder.svg'">
-            </div>
-            <div class="project-body">
-              <div class="project-tag">AI • Research</div>
-              <h3>Multi-Prompt Technique Ensemble</h3>
-              <p>Robust question classification using multi-prompt ensembles and TF-POS weighting.</p>
-              <div class="project-meta">
-                <span class="tag">Python</span>
-                <span class="tag">LLM</span>
-                <a class="link-icon" href="https://github.com/99pranit" target="_blank" rel="noopener" aria-label="GitHub">Code</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card card-3d" role="listitem" tabindex="0" data-category="iot" data-image="assets/projects/project2.jpg">
-            <div class="project-media">
-              <img src="assets/projects/project2.jpg" alt="Human Activity Detection" loading="lazy" onerror="this.onerror=null;this.src='assets/placeholder.svg'">
-            </div>
-            <div class="project-body">
-              <div class="project-tag">IoT • TinyML</div>
-              <h3>Human Activity Detection</h3>
-              <p>ESP32-S3 data pipeline and TinyML hierarchical model for activity recognition.</p>
-              <div class="project-meta">
-                <span class="tag">TinyML</span>
-                <span class="tag">TensorFlow</span>
-                <a class="link-icon" href="#" aria-hidden="true">Demo</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card card-3d" role="listitem" tabindex="0" data-category="web" data-image="assets/projects/project3.jpg">
-            <div class="project-media">
-              <img src="assets/projects/project3.jpg" alt="Retail Dashboard" loading="lazy" onerror="this.onerror=null;this.src='assets/placeholder.svg'">
-            </div>
-            <div class="project-body">
-              <div class="project-tag">Web • Dashboard</div>
-              <h3>Retail Sales Dashboard</h3>
-              <p>Tableau and ETL driven dashboard to surface KPIs and bottlenecks.</p>
-              <div class="project-meta">
-                <span class="tag">Tableau</span>
-                <span class="tag">ETL</span>
-                <a class="link-icon" href="#" aria-hidden="true">View</a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="projects-cta" data-aos="fade-up" data-aos-delay="240">
-          <a class="btn primary" href="#contact">See all projects</a>
         </div>
       </div>
     </section>
 
-    <!-- Experience -->
-    <section id="experience" class="section alt" data-aos="fade-up">
+    <!-- Skills Section -->
+    <section id="skills" class="section" aria-labelledby="skills-heading">
       <div class="container">
-        <h2 class="section-heading">Experience</h2>
+        <h2 id="skills-heading" class="section-heading">My Skills</h2>
+        <div class="skills-categories">
+          <div class="skill-category">
+            <h3><i class="fas fa-code"></i> Programming</h3>
+            <div class="skills-group">
+              <div class="skill-item">
+                <span>Python</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span>SQL</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span>JavaScript</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-brain"></i> Machine Learning</h3>
+            <div class="skills-group">
+              <div class="skill-item">
+                <span>TensorFlow</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span>Scikit-Learn</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span>Hugging Face</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span>Transfer Learning</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-database"></i> Data Engineering</h3>
+            <div class="skills-group">
+              <div class="skill-item">
+                <span>Pandas</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 95%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span>Docker</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 70%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span>GCP</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 60%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <div class="container">
+        <h2 id="projects-heading" class="section-heading">Projects</h2>
+        <div class="projects-filter">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+          <button class="filter-btn" data-filter="sequential">Sequential</button>
+          <button class="filter-btn" data-filter="computer-vision">Computer Vision</button>
+          <button class="filter-btn" data-filter="nlp">NLP</button>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card" data-category="machine-learning">
+            <div class="project-content">
+              <h3>Customer Churn Prediction Calculator</h3>
+              <p>This project predicts customer churn for telecom companies using the Kaggle Telecom Customer Churn Prediction Dataset.</p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>Streamlit</span>
+                <span>Docker</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/99pranit/Customer-Churn-Probability-Calculator" class="project-link" target="_blank" aria-label="View code on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-category="nlp">
+            <div class="project-content">
+              <h3>Amazon Product Review Calculator</h3>
+              <p>Calculate Amazon product score based on positive and negative reviews.</p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>Streamlit</span>
+                <span>TensorFlow</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/99pranit/amazon_review_score_calculator" class="project-link" target="_blank" aria-label="View code on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-category="computer-vision">
+            <div class="project-content">
+              <h3>Object Detection System</h3>
+              <p>Real-time object detection using YOLO algorithm for security applications.</p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>OpenCV</span>
+                <span>YOLO</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/99pranit" class="project-link" target="_blank" aria-label="View code on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="projects-cta">
+          <a href="https://github.com/99pranit" class="btn" target="_blank">
+            View More on GitHub <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section" aria-labelledby="experience-heading">
+      <div class="container">
+        <h2 id="experience-heading" class="section-heading">Experience</h2>
         <div class="timeline">
           <div class="timeline-item">
+            <div class="timeline-marker"></div>
             <div class="timeline-content">
-              <h3>Analyst — Data Engineer @ MathCo</h3>
-              <p class="muted">Jun 2022 — Oct 2023</p>
-              <p>Built ETL pipelines and dashboards; improved reporting performance and insights for operations.</p>
+              <h3>Data Engineer</h3>
+              <h4>MathCo</h4>
+              <p class="timeline-date">June 2022 - October 2023</p>
+              <p>Developed and maintained data pipelines for large-scale analytics projects. Implemented ETL processes and built interactive dashboards for business intelligence.</p>
             </div>
           </div>
-          <!-- add more items as needed -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="section" data-aos="fade-up">
-      <div class="container">
-        <h2 class="section-heading">Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <h4>Machine Learning</h4>
-            <div class="skill-bar"><div class="skill-fill" style="--pct:92%"></div></div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Analyst - Intern</h3>
+              <h4>Tech Innovations Ltd.</h4>
+              <p class="timeline-date">Jan 2022 - May 2022</p>
+              <p>Worked on predictive modeling projects and collaborated with cross-functional teams to implement machine learning solutions for business problems.</p>
+            </div>
           </div>
-          <div class="skill-card">
-            <h4>Deep Learning & NLP</h4>
-            <div class="skill-bar"><div class="skill-fill" style="--pct:86%"></div></div>
-          </div>
-          <div class="skill-card">
-            <h4>ETL & Dashboards</h4>
-            <div class="skill-bar"><div class="skill-fill" style="--pct:88%"></div></div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Teaching/Research Assistant</h3>
+              <h4>NIT Durgapur</h4>
+              <p class="timeline-date">Aug 2021 - Dec 2021</p>
+              <p>Assisted in research on computer vision algorithms and published a paper on efficient object detection techniques in low-light conditions.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section alt" data-aos="fade-up">
+    <!-- Contact Section -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
       <div class="container">
-        <h2 class="section-heading">Contact</h2>
-        <div class="contact-grid">
-          <div class="contact-card">
-            <h3>Get in touch</h3>
-            <p class="muted">Email: <a href="mailto:99pranitd@gmail.com">99pranitd@gmail.com</a></p>
-            <p class="muted">Location: Durgapur, India</p>
+        <h2 id="contact-heading" class="section-heading">Contact Me</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3>Email</h3>
+                <a href="mailto:99pranitd@gmail.com">99pranitd@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Location</h3>
+                <p>Durgapur, West Bengal, India</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-linkedin"></i>
+              <div>
+                <h3>LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/pranit-das-87739a230" target="_blank">Connect with me</a>
+              </div>
+            </div>
             <div class="contact-socials">
-              <a href="https://github.com/99pranit" target="_blank" rel="noopener">GitHub</a>
-              <a href="https://www.linkedin.com/in/pranit-das-87739a230" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="https://github.com/99pranit" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://x.com/99pranitd" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.instagram.com/99pranit/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
             </div>
           </div>
-
-          <form id="contactForm" class="contact-form" aria-label="Contact form">
-            <div class="form-row"><input name="name" type="text" placeholder="Your name" required></div>
-            <div class="form-row"><input name="email" type="email" placeholder="Your email" required></div>
-            <div class="form-row"><textarea name="message" rows="5" placeholder="Message" required></textarea></div>
-            <div class="form-row actions"><button class="btn primary" type="submit">Send</button><small class="muted">No server? Mailto fallback will open your email client.</small></div>
-          </form>
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn submit-btn">
+                Send Message <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
-
-    <div id="lightbox" class="lightbox" aria-hidden="true">
-      <button id="lightboxClose" class="lightbox-close" aria-label="Close">✕</button>
-      <img id="lightboxImg" src="" alt="Preview">
-    </div>
-
   </main>
 
-  <footer class="site-footer">
+  <!-- Footer -->
+  <footer class="footer">
     <div class="container">
-      <div class="footer-inner">
-        <div>© <span id="year"></span> Pranit Das</div>
-        <div class="footer-links"><a href="resume.pdf" download>Resume</a></div>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <a href="#home">Pranit Das</a>
+        </div>
+        <p class="footer-tagline">AI Engineer & Data Scientist</p>
+        <div class="footer-social">
+          <a href="https://github.com/99pranit" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/pranit-das-87739a230" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://x.com/99pranitd" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="mailto:99pranitd@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2025</span> Pranit Das. All rights reserved.</p>
+        <button id="back-to-top" aria-label="Back to top">
+          <i class="fas fa-arrow-up"></i>
+        </button>
       </div>
     </div>
-
-    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
   </footer>
 
-  <!-- AOS + Typed minimal usage -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <!-- Cookie Consent -->
+  <div class="cookie-consent" id="cookieConsent">
+    <p>This website uses cookies to ensure you get the best experience.</p>
+    <div class="cookie-buttons">
+      <button id="acceptCookies" class="btn-sm">Accept</button>
+      <button id="cookieSettings" class="btn-sm secondary">Settings</button>
+    </div>
+  </div>
 
+  <!-- Theme Toggle -->
+  <button id="theme-toggle" aria-label="Toggle dark/light mode">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+  </button>
+
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
