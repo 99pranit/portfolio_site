@@ -6,10 +6,6 @@
   --primary-light: #fbb679;
   --secondary-color: #ffea8b;
   
-  /* RGB values for opacity */
-  --primary-color-rgb: 255, 171, 102;
-  --text-muted-rgb: 107, 114, 128;
-  
   /* Text Colors */
   --text-dark: #1f2937;
   --text-light: #f9fafb;
@@ -45,25 +41,6 @@ body.dark-theme {
   --text-dark: var(--text-light);
   --text-muted: #94a3b8;
   --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
-}
-
-body.dark-theme .header.scrolled {
-  background-color: rgba(var(--dark-bg), 0.8);
-}
-
-body.dark-theme .nav-link {
-  color: var(--text-light);
-}
-
-body.dark-theme .filter-btn {
-  color: var(--text-light);
-}
-
-body.dark-theme .form-group input,
-body.dark-theme .form-group textarea {
-  background-color: var(--dark-card);
-  color: var(--text-light);
-  border-color: var(--dark-border);
 }
 
 * {
@@ -222,15 +199,10 @@ ul {
   transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-.loader-container.hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
 .loader {
   width: 60px;
   height: 60px;
-  border: 5px solid rgba(var(--primary-color-rgb), 0.2);
+  border: 5px solid rgba(var(--primary-color), 0.2);
   border-radius: 50%;
   border-top-color: var(--primary-color);
   animation: spin 1s infinite ease-in-out;
@@ -366,7 +338,6 @@ ul {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: linear-gradient(135deg, rgba(255, 171, 102, 0.1) 0%, rgba(255, 234, 139, 0.1) 100%);
 }
 
 .hero-content {
@@ -561,16 +532,13 @@ ul {
   border-radius: var(--border-radius);
 }
 
-.profile-placeholder {
-  width: 100%;
-  height: 400px;
-  background: linear-gradient(135deg, var(--primary-light), var(--secondary-color));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 5rem;
+.about-image img {
   border-radius: var(--border-radius);
+  transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.05);
 }
 
 .about-text p {
@@ -1150,6 +1118,15 @@ body.dark-theme #theme-toggle .fa-sun {
 .magnetic {
   position: relative;
   transition: transform 0.15s ease-out;
+}
+
+/* AOS Animations Custom */
+[data-aos] {
+  pointer-events: none;
+}
+
+[data-aos].aos-animate {
+  pointer-events: auto;
 }
 
 /* ======= Responsive Design ======= */

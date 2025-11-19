@@ -10,8 +10,9 @@
   <meta property="og:description" content="Portfolio showcasing AI and data science projects by Pranit Das">
   <meta property="og:type" content="website">
   <title>Pranit Das | AI Engineer & Data Scientist</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -20,7 +21,7 @@
   <a href="#main" class="skip-link">Skip to main content</a>
 
   <!-- Loading Screen -->
-  <div class="loader-container" id="loader-container" aria-hidden="true">
+  <div class="loader-container" aria-hidden="true">
     <div class="loader"></div>
     <p class="loading-text">Loading...</p>
   </div>
@@ -41,7 +42,6 @@
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
           <li><a href="https://drive.google.com/file/d/1mtxsIVvZ_LZHlUhob4nf-NCP5bEZghGY/view?usp=sharing" class="nav-link resume-btn" target="_blank">Resume <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
         </ul>
@@ -52,9 +52,9 @@
   <main id="main">
     <!-- Hero Section -->
     <section class="hero" id="home" aria-label="introduction">
-      <div class="particles-container"></div>
+      <div id="particles" class="particles-container" aria-hidden="true"></div>
       <div class="hero-content">
-        <div class="hero-text">
+        <div class="hero-text" data-aos="fade-up">
           <p class="pre-heading">Hello, I'm</p>
           <h1>Pranit Das</h1>
           <div class="animated-subtitle">
@@ -66,19 +66,21 @@
           <div class="hero-cta">
             <a href="#projects" class="cta-btn magnetic">
               <span>Explore Projects</span>
+              <div class="hover-effect" aria-hidden="true"></div>
             </a>
             <a href="#contact" class="cta-btn secondary magnetic">
               <span>Get in Touch</span>
+              <div class="hover-effect" aria-hidden="true"></div>
             </a>
           </div>
           <div class="social-icons">
-            <a href="https://github.com/99pranit" target="_blank" aria-label="GitHub Profile">
+            <a href="https://github.com/pranit-das" target="_blank" aria-label="GitHub Profile">
               <i class="fab fa-github"></i>
             </a>
             <a href="https://www.linkedin.com/in/pranit-das-87739a230" target="_blank" aria-label="LinkedIn Profile">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="https://x.com/99pranitd" target="_blank" aria-label="Twitter Profile">
+            <a href="https://twitter.com/pranitdas" target="_blank" aria-label="Twitter Profile">
               <i class="fab fa-twitter"></i>
             </a>
             <a href="mailto:99pranitd@gmail.com" aria-label="Email Me">
@@ -94,16 +96,14 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section" aria-labelledby="about-heading">
+    <section id="about" class="section" data-aos="fade-up" aria-labelledby="about-heading">
       <div class="container">
         <h2 id="about-heading" class="section-heading">About Me</h2>
         <div class="about-content">
-          <div class="about-image">
-            <div class="profile-placeholder">
-              <i class="fas fa-user"></i>
-            </div>
+          <div class="about-image" data-aos="fade-right">
+            <img src="https://raw.githubusercontent.com/99pranit/portfolio_site/main/image/DSC_9488%20aa%20aa.jpg" alt="Pranit Das" loading="lazy">
           </div>
-          <div class="about-text">
+          <div class="about-text" data-aos="fade-left">
             <p>
               I am Pranit Das, an aspiring AI Engineer and Data Scientist with a strong foundation in data analytics, machine learning, and data visualization. Currently pursuing my Master's in Computer Science with a specialization in Data Science and AI at NIT Durgapur, I have practical industry experience as a Data Engineer at MathCo.
             </p>
@@ -114,7 +114,7 @@
               I believe in the power of AI to transform industries and improve lives. My goal is to create innovative, ethical, and efficient solutions that make a positive impact on the world.
             </p>
             <div class="about-cta">
-              <a href="https://drive.google.com/file/d/1mtxsIVvZ_LZHlUhob4nf-NCP5bEZghGY/view?usp=sharing" class="btn" target="_blank">Download Resume <i class="fa-solid fa-download"></i></a>
+              <a href="https://raw.githubusercontent.com/99pranit/portfolio_site/main/image/resume.pdf" class="btn" target="_blank">Download Resume <i class="fa-solid fa-download"></i></a>
             </div>
           </div>
         </div>
@@ -122,11 +122,11 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section" aria-labelledby="skills-heading">
+    <section id="skills" class="section" data-aos="fade-up" aria-labelledby="skills-heading">
       <div class="container">
         <h2 id="skills-heading" class="section-heading">My Skills</h2>
         <div class="skills-categories">
-          <div class="skill-category">
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
             <h3><i class="fas fa-code"></i> Programming</h3>
             <div class="skills-group">
               <div class="skill-item">
@@ -141,15 +141,9 @@
                   <div class="skill-level" style="width: 85%"></div>
                 </div>
               </div>
-              <div class="skill-item">
-                <span>JavaScript</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 70%"></div>
-                </div>
-              </div>
             </div>
           </div>
-          <div class="skill-category">
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
             <h3><i class="fas fa-brain"></i> Machine Learning</h3>
             <div class="skills-group">
               <div class="skill-item">
@@ -178,7 +172,7 @@
               </div>
             </div>
           </div>
-          <div class="skill-category">
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
             <h3><i class="fas fa-database"></i> Data Engineering</h3>
             <div class="skills-group">
               <div class="skill-item">
@@ -206,10 +200,10 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section" aria-labelledby="projects-heading">
+    <section id="projects" class="section" data-aos="fade-up" aria-labelledby="projects-heading">
       <div class="container">
         <h2 id="projects-heading" class="section-heading">Projects</h2>
-        <div class="projects-filter">
+        <div class="projects-filter" data-aos="fade-up">
           <button class="filter-btn active" data-filter="all">All</button>
           <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
           <button class="filter-btn" data-filter="sequential">Sequential</button>
@@ -217,7 +211,10 @@
           <button class="filter-btn" data-filter="nlp">NLP</button>
         </div>
         <div class="projects-grid">
-          <article class="project-card" data-category="machine-learning">
+          <article class="project-card" data-category="machine-learning" data-aos="fade-up">
+             <!-- <div class="project-image">
+              <img src="project1.jpg" alt="Amazon Product Review Calulator" loading="lazy">
+            </div> -->
             <div class="project-content">
               <h3>Customer Churn Prediction Calculator</h3>
               <p>This project predicts customer churn for telecom companies using the Kaggle Telecom Customer Churn Prediction Dataset.</p>
@@ -230,13 +227,16 @@
                 <a href="https://github.com/99pranit/Customer-Churn-Probability-Calculator" class="project-link" target="_blank" aria-label="View code on GitHub">
                   <i class="fab fa-github"></i>
                 </a>
+                <!-- <a href="https://herokuapp.com" class="project-link" target="_blank" aria-label="View live demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a> -->
               </div>
             </div>
           </article>
-          <article class="project-card" data-category="nlp">
+          <article class="project-card" data-category="nlp" data-aos="fade-up">
             <div class="project-content">
-              <h3>Amazon Product Review Calculator</h3>
-              <p>Calculate Amazon product score based on positive and negative reviews.</p>
+              <h3>Amazon Product Review Calulator</h3>
+              <p>Calculate Amazon product score based on positive and negative review.</p>
               <div class="project-tags">
                 <span>Python</span>
                 <span>Streamlit</span>
@@ -249,24 +249,9 @@
               </div>
             </div>
           </article>
-          <article class="project-card" data-category="computer-vision">
-            <div class="project-content">
-              <h3>Object Detection System</h3>
-              <p>Real-time object detection using YOLO algorithm for security applications.</p>
-              <div class="project-tags">
-                <span>Python</span>
-                <span>OpenCV</span>
-                <span>YOLO</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/99pranit" class="project-link" target="_blank" aria-label="View code on GitHub">
-                  <i class="fab fa-github"></i>
-                </a>
-              </div>
-            </div>
-          </article>
+          <!-- More projects will be added dynamically via JavaScript -->
         </div>
-        <div class="projects-cta">
+        <div class="projects-cta" data-aos="fade-up">
           <a href="https://github.com/99pranit" class="btn" target="_blank">
             View More on GitHub <i class="fab fa-github"></i>
           </a>
@@ -275,11 +260,11 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="section" aria-labelledby="experience-heading">
+    <section id="experience" class="section" data-aos="fade-up" aria-labelledby="experience-heading">
       <div class="container">
         <h2 id="experience-heading" class="section-heading">Experience</h2>
         <div class="timeline">
-          <div class="timeline-item">
+          <div class="timeline-item" data-aos="fade-up">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
               <h3>Data Engineer</h3>
@@ -288,7 +273,7 @@
               <p>Developed and maintained data pipelines for large-scale analytics projects. Implemented ETL processes and built interactive dashboards for business intelligence.</p>
             </div>
           </div>
-          <div class="timeline-item">
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
               <h3>Analyst - Intern</h3>
@@ -297,7 +282,7 @@
               <p>Worked on predictive modeling projects and collaborated with cross-functional teams to implement machine learning solutions for business problems.</p>
             </div>
           </div>
-          <div class="timeline-item">
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
               <h3>Teaching/Research Assistant</h3>
@@ -311,11 +296,11 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section" aria-labelledby="contact-heading">
+    <section id="contact" class="section" data-aos="fade-up" aria-labelledby="contact-heading">
       <div class="container">
         <h2 id="contact-heading" class="section-heading">Contact Me</h2>
         <div class="contact-content">
-          <div class="contact-info">
+          <div class="contact-info" data-aos="fade-right">
             <div class="contact-item">
               <i class="fas fa-envelope"></i>
               <div>
@@ -349,7 +334,7 @@
               </a>
             </div>
           </div>
-          <div class="contact-form">
+          <div class="contact-form" data-aos="fade-left">
             <form id="contactForm">
               <div class="form-group">
                 <label for="name">Name</label>
@@ -425,6 +410,11 @@
   </button>
 
   <!-- Scripts -->
-  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
