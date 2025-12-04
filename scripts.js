@@ -1,9 +1,14 @@
 // scripts.js
 
 // Initialize AOS (Animate On Scroll)
-AOS.init({
-  duration: 800,
-  once: true,
+document.addEventListener('DOMContentLoaded', function() {
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+
+  // Set current year in footer
+  document.getElementById('current-year').textContent = new Date().getFullYear();
 });
 
 // Particles.js Configuration
@@ -153,6 +158,16 @@ backToTop.addEventListener("click", () => {
   });
 });
 
+// Header scroll effect
+window.addEventListener('scroll', function() {
+  const header = document.querySelector('.header');
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
 // Dark Mode Toggle
 const themeToggle = document.getElementById("theme-toggle");
 const body = document.body;
@@ -175,6 +190,7 @@ if (darkMode === "true") {
 // Cookie Consent
 const cookieConsent = document.getElementById("cookieConsent");
 const acceptCookies = document.getElementById("acceptCookies");
+const cookieSettings = document.getElementById("cookieSettings");
 
 if (!localStorage.getItem("cookiesAccepted")) {
   setTimeout(() => {
@@ -185,6 +201,10 @@ if (!localStorage.getItem("cookiesAccepted")) {
 acceptCookies.addEventListener("click", () => {
   localStorage.setItem("cookiesAccepted", true);
   cookieConsent.classList.remove("show");
+});
+
+cookieSettings.addEventListener("click", () => {
+  alert("Cookie settings: All cookies are essential for site functionality.");
 });
 
 // Form Submission
@@ -225,4 +245,56 @@ window.addEventListener("load", () => {
   setTimeout(() => {
     loaderContainer.style.display = "none";
   }, 500);
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    
+    const targetId = this.getAttribute('href');
+    if (targetId === '#') return;
+    
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop - 80,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+// Active navigation link highlighting
+const navLinks = document.querySelectorAll('.nav-link');
+const sectionsWithIds = document.querySelectorAll('section[id]');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  
+  sectionsWithIds.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (scrollY >= (sectionTop - 150)) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${current}`) {
+      link.classList.add('active');
+    }
+  });
+});
+
+// Initialize tooltips for social icons
+const socialIcons = document.querySelectorAll('.social-icons a, .footer-social a');
+socialIcons.forEach(icon => {
+  icon.addEventListener('mouseenter', function() {
+    const ariaLabel = this.getAttribute('aria-label');
+    if (ariaLabel) {
+      // You could add a custom tooltip here if needed
+    }
+  });
 });
