@@ -97,7 +97,7 @@ particlesJS("particles", {
 
 // Typed.js for Animated Subtitle
 const typed = new Typed(".typing-text", {
-  strings: ["AI Engineer", "Data Scientist", "Machine Learning Enthusiast"],
+  strings: ["AI Researcher", "Data Investigator", "Predictive Modeling Enthusiast", "Generative Intelligence Builder"],
   typeSpeed: 50,
   backSpeed: 25,
   loop: true,
