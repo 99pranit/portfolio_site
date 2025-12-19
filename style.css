@@ -778,6 +778,11 @@ ul {
   color: white;
 }
 
+.status-badge.paused {
+  background-color: #ffe992;
+  color: #ffffff;
+}
+
 .status-badge.completed {
   background-color: #10b981;
   color: white;
